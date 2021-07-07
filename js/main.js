@@ -20,6 +20,11 @@ $(function () {
     $('.number').text('0');
   });
 
+  $('.more__btn').on('click', function () {
+    $('.more__btn').toggleClass('more__btn--active');
+    $('.more__error').toggleClass('more__error--active');
+  });
+
   wow = new WOW(
     {
       boxClass: 'wow',      // default
