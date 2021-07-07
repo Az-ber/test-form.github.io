@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test form</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+  
+  <main class="main">
+    <div class="container">
+      <form action="fail.html" class="form wow animate__zoomIn" id="form">
+        <h3 class="form__title">Info</h3>
+        <label class="form__label">
+          Enter your email address
+          <input type="email" class="form__input" required placeholder="team@checkforpatent.com">
+        </label>
+        <h3 class="form__title">Product 1</h3>
+        <label class="form__label">
+          Enter main keyword for the product
+          <input type="text" class="form__input" required placeholder="for example, sylicon wine cup">
+        </label>
+        <label class="form__label">
+          Enter link to the similar product as a reference
+          <input type="text" class="form__input" required placeholder="https://...">
+        </label>
+        <a href="#popup" class="form__link">
+          Add more products
+        </a>
+        <p class="form__text">
+          We offer discount up to 36% for multiple checks
+        </p>
+        <button type="submit" class="form__btn">
+          Submit and Pay 24.99 USD
+        </button>
+        <a class="form__secure" href="https://stripe.com/docs/security/stripe">Secure payment with Stripe</a>
+      </form>
+
+      <div class="popup" id="popup">
+        <a href="#form" class="popup__close">X</a>
+        <form action="#" class="popup__content">
+          <h3 class="form__title">Adding more products</h3>
+          <p class="popup__text">The more items you check, the better the price.</p>
+          <label class="popup__label popup__label--active popup__1">
+            <input type="radio" class="popup__radio" name="radio-1" checked>
+            <div class="popup__checked"></div>
+            <div class="popup__info popup__info--active">
+              <p>5 products for 80 usd / 16$ for each</p>
+              <span>You safe 36% on each patent check</span>
+            </div>
+          </label>
+          <label class="popup__label">
+            <input type="radio" class="popup__radio" name="radio-1">
+            <div class="popup__checked"></div>
+            <div class="popup__info">
+              <p>4 products for 72 usd / 18$ for each</p>
+              <span>You safe 28% on each patent check</span>
+            </div>
+          </label>
+          <label class="popup__label">
+            <input type="radio" class="popup__radio" name="radio-1">
+            <div class="popup__checked"></div>
+            <div class="popup__info">
+              <p>3 products for 60 usd / 20$ for each</p>
+              <span>You safe 20% on each patent check</span>
+            </div>
+          </label>
+          <label class="popup__label">
+            <input type="radio" class="popup__radio" name="radio-1">
+            <div class="popup__checked"></div>
+            <div class="popup__info">
+              <p>2 products for 44 usd / 22$ for each</p>
+              <span>You safe 12% on each patent check</span>
+            </div>
+          </label>
+          <label class="popup__label popup__2">
+            <input type="radio" class="popup__radio" name="radio-1">
+            <div class="popup__checked"></div>
+            <div class="popup__info">
+              <p>1 product for 24.99 usd</p>
+            </div>
+          </label>
+          <a href="#more" class="form__btn popup__btn">Continue</a>
+        </form>
+      </div>
+
+      <div class="more" id="more">
+        <a href="#form" class="more__close">X</a>
+        <div class="more__content">
+          <div class="more__item1">
+            <div class="more__top">
+              <h3 class="form__title">Product 2</h3>
+              <button class="more__remove1">
+                <img src="images/icons/remove.svg" alt="remove" class="more__img">
+              </button>
+            </div>
+            <p class="popup__text">Enter main keyword for the product</p>
+            <input type="text" class="more__input" required placeholder="for example, sylicon wine cup">
+            <p class="popup__text">Enter link to the similar product as a reference</p>
+            <input type="text" class="more__input" required placeholder="https://...">
+          </div>
+          <div class="more__item2">
+            <div class="more__top">
+              <h3 class="form__title">Product 3</h3>
+              <button class="more__remove2">
+                <img src="images/icons/remove.svg" alt="remove" class="more__img">
+              </button>
+            </div>
+            <p class="popup__text">Enter main keyword for the product</p>
+            <input type="text" class="more__input" required placeholder="for example, sylicon wine cup">
+            <p class="popup__text">Enter link to the similar product as a reference</p>
+            <input type="text" class="more__input" required placeholder="https://...">
+          </div>
+          <a href="success.html" class="form__btn popup__btn">Submit and Pay <span id="number" class="number">80</span> USD</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="js/main.min.js"></script>
+</body>
+</html>
